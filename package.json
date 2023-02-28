@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress run  --headless --reporter mochawesome",
-    "start": "webpack-dev-server --mode development --watch --open --hot --port=3000",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "webpack --mode production"
   },
   "keywords": [],
@@ -13,7 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-scripts": "^5.0.1"
   },
   "jest": {
     "moduleNameMapper": {
@@ -43,5 +44,17 @@
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
