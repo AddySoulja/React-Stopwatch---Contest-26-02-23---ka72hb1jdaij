@@ -34,15 +34,14 @@ const App = () => {
     setLaps([...laps, currentTime]);
   };
   const resetStopwatch = () => {
+    start_stop();
     setCurrentTime(0);
     setLaps([]);
   };
   return (
     <div id="main">
       <section>
-        <h1 className="seconds-elapsed" ref={startTime}>
-          {currentTime.toFixed(3)}
-        </h1>
+        <h1 className="seconds-elapsed">{currentTime.toFixed(3)}</h1>
         <section className="buttons">
           <button className="start-btn" onClick={start_stop}>
             START
